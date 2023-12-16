@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test name="Test">
+    <groups>
+      <run>
+        <include name="regression"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="test.LoginTest"/>
+      <class name="test.AddCustomerTest"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)">
+    <groups>
+      <run>
+        <include name="regression"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="test.AddCustomerTest">
+        <methods>
+          <include name="userShouldBeAbleToAddNewCustomer"/>
+        </methods>
+      </class> <!-- test.AddCustomerTest -->
+      <class name="test.LoginTest">
+        <methods>
+          <include name="readJson"/>
+        </methods>
+      </class> <!-- test.LoginTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
